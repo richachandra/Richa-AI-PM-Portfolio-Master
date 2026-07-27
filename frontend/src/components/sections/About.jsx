@@ -23,7 +23,7 @@ export const About = () => (
           />
           <div className="absolute bottom-5 left-5 z-20 glass rounded-full px-4 py-2">
             <span className="font-mono text-xs tracking-widest text-white/80">
-              Berlin · 52.52°N
+              Mumbai · 19.07°N
             </span>
           </div>
         </div>

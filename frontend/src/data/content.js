@@ -1,9 +1,9 @@
 // Placeholder content — edit freely.
 
 export const profile = {
-  name: "Kaï Mercer",
-  role: "Senior Product Manager",
-  location: "Berlin — remote worldwide",
+  name: "Richa Chandra",
+  role: "Product Manager",
+  location: "Mumbai",
   email: "richachandra07@gmail.com",
   heroLines: ["Building products", "people can't", "put down."],
   tagline:
