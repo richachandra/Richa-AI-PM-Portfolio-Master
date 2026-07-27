@@ -23,7 +23,7 @@ export const Hero = () => {
     <section
       ref={ref}
       id="hero"
-      className="relative flex h-[100svh] min-h-[640px] items-center overflow-hidden"
+      className="relative flex min-h-[100svh] items-center overflow-hidden pt-28 pb-24"
       data-testid="hero-section"
     >
       {/* Parallax cinematic background */}
