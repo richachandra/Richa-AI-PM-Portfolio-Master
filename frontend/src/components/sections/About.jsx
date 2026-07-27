@@ -52,7 +52,7 @@ export const About = () => (
           ))}
         </div>
 
-        <div className="mt-12 grid grid-cols-2 gap-px overflow-hidden rounded-2xl border border-white/10 bg-white/5 sm:grid-cols-4">
+        <div className="mt-12 grid grid-cols-1 gap-px overflow-hidden rounded-2xl border border-white/10 bg-white/5 sm:grid-cols-3">
           {about.stats.map((s, i) => (
             <Reveal
               key={s.label}

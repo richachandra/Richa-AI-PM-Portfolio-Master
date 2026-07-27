@@ -39,7 +39,6 @@ export const about = {
   stats: [
     { value: "14+", label: "Years in product" },
     { value: "3", label: "0→1 launches" },
-    { value: "40%", label: "Efficiency gained" },
     { value: "99.5%", label: "Platform uptime" },
   ],
 };
