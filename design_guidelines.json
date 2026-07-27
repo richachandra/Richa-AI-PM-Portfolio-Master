@@ -1,0 +1,153 @@
+{
+  "theme": "dark",
+  "archetype": "Luxury & Electric Mix",
+  "typography": {
+    "headings": {
+      "fontFamily": "'Cabinet Grotesk', sans-serif",
+      "weights": ["300", "500", "800"],
+      "usage": "Use tight letter spacing (tracking-tighter) for massive H1/H2s. Bold is for impact, Light is for elegance."
+    },
+    "body": {
+      "fontFamily": "'Satoshi', sans-serif",
+      "weights": ["400", "500"],
+      "usage": "Use loose leading (leading-relaxed) for readable paragraph content."
+    },
+    "accent_mono": {
+      "fontFamily": "'JetBrains Mono', monospace",
+      "weights": ["400"],
+      "usage": "Use for overlines, labels, numbering (e.g., manifesto chapters), and tiny tech details. tracking-[0.2em] uppercase."
+    }
+  },
+  "colors": {
+    "background": "#050505",
+    "surface": "#0A0A0A",
+    "surface_glass": "rgba(255, 255, 255, 0.03)",
+    "primary_accent": "#00F0FF",
+    "secondary_accent": "#FF007A",
+    "text_primary": "#FFFFFF",
+    "text_secondary": "rgba(255, 255, 255, 0.6)",
+    "text_muted": "rgba(255, 255, 255, 0.4)",
+    "border_glass": "rgba(255, 255, 255, 0.1)",
+    "border_highlight": "rgba(255, 255, 255, 0.2)"
+  },
+  "visual_enhancers": {
+    "glassmorphism": {
+      "background": "bg-white/[0.03]",
+      "blur": "backdrop-blur-2xl",
+      "border": "border border-white/10",
+      "shadow": "shadow-[0_8px_32px_rgba(0,0,0,0.4)]",
+      "note": "Use this strictly for floating headers, over-image cards, and sticky elements. Must have the 1px inner border to look like milled crystal."
+    },
+    "spotlight_treatment": "Images should have a radial gradient overlay or soft shadow glow to mimic a spotlight hitting them in a dark room.",
+    "textures": "Add a very subtle grain/noise overlay fixed to the viewport (`pointer-events-none`) to kill digital flatness and enhance the cinematic feel."
+  },
+  "sections_blueprint": {
+    "Hero": {
+      "layout": "Massive 100vh layout. Central text. Subtle 3D or parallax background element.",
+      "motion": "Masked line-by-line reveal on load. Use `overflow-hidden` on line wrappers and translate text `y: 100% -> 0` with framer-motion.",
+      "features": "Cinematic dark abstract background. Subtle scroll down indicator."
+    },
+    "Editorial_Marquee": {
+      "layout": "Full width, overflowing x.",
+      "motion": "Slow, constant linear translation (react-fast-marquee).",
+      "features": "Massive outline text or elegant brand/client list separated by asterisks or bullets."
+    },
+    "About": {
+      "layout": "Asymmetrical Bento Grid. 1 large portrait, adjacent text blocks.",
+      "motion": "Scroll-triggered fade and slide up.",
+      "features": "Cinematic portrait in a clipped frame with a subtle monochrome filter or dark spotlight."
+    },
+    "Past_Product_Work": {
+      "layout": "Staggered overlapping images or wide cinematic frames.",
+      "motion": "Parallax scroll on images (images move slightly slower than the container).",
+      "features": "Real product photography treated with spotlight/clipped frames. Dark theme mockups."
+    },
+    "Case_Studies": {
+      "layout": "Liquid-glass cards in a responsive grid. High internal padding (p-8 or p-12).",
+      "motion": "Hover states lift the card and increase border opacity. Scroll reveal per card.",
+      "features": "Deep dark cards with vibrant hover accents (Electric Cyan/Pink glow)."
+    },
+    "Product_Improvement_Manifesto": {
+      "layout": "Numbered list layout. Mono font for massive chapter numbers (01, 02, 03).",
+      "motion": "Staggered reveal of chapters on scroll.",
+      "features": "High contrast. Stark white text against black. Accent color used sparingly on the numbers."
+    },
+    "Side_Projects": {
+      "layout": "Dense bento grid or list view. Technical feel.",
+      "features": "Glassmorphism tags. Mono typography for tech stack."
+    },
+    "Contact": {
+      "layout": "Massive footer. Massive text for CTA (e.g., text-[10vw]).",
+      "motion": "Magnetic button effect on the primary CTA.",
+      "features": "Minimal input fields if any, or a simple mailto link dressed up elegantly."
+    }
+  },
+  "grids_layouts": {
+    "spacing_philosophy": "Generous. Use p-12, p-16, py-32 for section padding. Tension and negative space are key.",
+    "container": "Max-w-7xl mx-auto px-6 md:px-12",
+    "bento_grid": "grid-cols-1 md:grid-cols-12 gap-8. Asymmetric spanning (e.g., col-span-8 and col-span-4)."
+  },
+  "motion_language": {
+    "libraries": ["framer-motion", "@studio-freight/lenis"],
+    "scroll": "Smooth momentum scrolling is MANDATORY. Initialize Lenis at the root layout.",
+    "on_load": "Signature kinetic reveal. Masked text lines rising up, staggering by 0.1s. Easing: [0.76, 0, 0.24, 1].",
+    "scroll_reveal": "Elements fade in and translate Y by 40px when 20% in view.",
+    "micro_interactions": "Buttons have scale-down effect on tap. Hover reveals subtle glow or tracing beam."
+  },
+  "accessibility": {
+    "contrast": "Ensure text over images has dark gradients or text-shadow. Vibrant accents must pass 3:1 against #050505.",
+    "motion": "Respect prefers-reduced-motion media query. Disable heavy parallax if true.",
+    "testing": "All interactive and key informational elements MUST include a `data-testid` attribute (kebab-case, role-based)."
+  },
+  "image_urls": {
+    "hero_background": {
+      "url": "https://images.unsplash.com/photo-1710438399422-2fca27686bcd?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NTYxODl8MHwxfHNlYXJjaHwyfHxkYXJrJTIwYWJzdHJhY3QlMjBsaXF1aWQlMjBnbGFzc3xlbnwwfHx8fDE3ODUxNDE5MDB8MA&ixlib=rb-4.1.0&q=85",
+      "description": "Dark abstract liquid glass for cinematic hero background.",
+      "category": "Hero"
+    },
+    "author_portrait": {
+      "url": "https://images.unsplash.com/photo-1532171875345-9712d9d4f65a?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1Mjh8MHwxfHNlYXJjaHwyfHxjaW5lbWF0aWMlMjBwb3J0cmFpdCUyMHByb2Zlc3Npb25hbCUyMGRhcmt8ZW58MHx8fHwxNzgxODk0MTYzfDA&ixlib=rb-4.1.0&q=85",
+      "description": "Cinematic dark professional portrait.",
+      "category": "About"
+    },
+    "product_work_1": {
+      "url": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NTYxODh8MHwxfHNlYXJjaHwxfHxzbGVlayUyMHRlY2glMjBkYXNoYm9hcmQlMjBkYXJrfGVufDB8fHx8MTc4NTE0MTkwMXww&ixlib=rb-4.1.0&q=85",
+      "description": "Sleek tech dashboard.",
+      "category": "Past Product Work"
+    },
+    "product_work_2": {
+      "url": "https://images.unsplash.com/photo-1525547719571-a2d4ac8945e2",
+      "description": "MacBook Pro turned on, neon accents.",
+      "category": "Past Product Work"
+    },
+    "case_study_1": {
+      "url": "https://images.unsplash.com/photo-1510717029971-27681a0e9da9?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NTYxNzV8MHwxfHNlYXJjaHwyfHxtaW5pbWFsaXN0JTIwc21hcnRwaG9uZSUyMGRhcmslMjBzY3JlZW58ZW58MHx8fHwxNzg1MTQxOTExfDA&ixlib=rb-4.1.0&q=85",
+      "description": "Person holding glowing smartphone in the dark.",
+      "category": "Case Studies"
+    },
+    "case_study_2": {
+      "url": "https://images.unsplash.com/photo-1531297484001-80022131f5a1",
+      "description": "Glowing laptop edge in the dark.",
+      "category": "Case Studies"
+    }
+  },
+  "instructions_to_main_agent": [
+    "Install required libraries: `yarn add framer-motion @studio-freight/lenis lucide-react react-fast-marquee`.",
+    "Do not use generic Shadcn components out of the box if they feel 'SaaS-like'. Strip the generic styling and apply liquid-glass styling.",
+    "Create a React layout component that initializes Lenis for smooth momentum scrolling globally.",
+    "For the hero on-load reveal, create a component that splits the text into lines, wraps each line in a div with `overflow-hidden`, and animates the inner text from `y: 100%` to `y: 0`.",
+    "Use Phosphor icons or lucide-react for the marquee if you need logos, or just use large outline text typography for an editorial feel.",
+    "Implement the numbered manifesto with huge '01', '02' in JetBrains Mono, placed alongside body text.",
+    "DO NOT use a fully transparent header. Use `bg-black/60` with `backdrop-blur-xl` and `border-b border-white/10`."
+  ],
+  "universal_guidelines_for_main_agent": [
+    "You tend to converge toward generic outputs. Avoid this: make creative, distinctive frontends that surprise and delight.",
+    "Don't make generic centered layouts. Use asymmetry and negative space.",
+    "Create depth through layered design elements with z-index hierarchy and glassmorphism.",
+    "You MUST NOT apply universal transition (e.g. `transition: all`). Always add transitions for specific interactive elements.",
+    "You MUST NOT center align the app container in App.css.",
+    "Every interaction needs micro-animations - hover states, transitions, entrance animations. Static = dead.",
+    "Use 2-3x more spacing than feels comfortable. Cramped designs look cheap.",
+    "All interactive and key informational elements MUST include `data-testid` attribute."
+  ]
+}
