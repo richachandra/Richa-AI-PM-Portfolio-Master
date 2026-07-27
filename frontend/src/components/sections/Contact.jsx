@@ -39,7 +39,7 @@ export const Contact = () => (
               </Magnetic>
               <a
                 href="/resume.pdf"
-                download="Kai-Mercer-Resume.pdf"
+                download="RichaChandra_ProductManager.pdf"
                 data-testid="download-resume-btn"
                 className="group inline-flex items-center gap-2.5 rounded-full border border-white/20 px-7 py-5 font-head text-base font-medium text-white transition-colors duration-300 hover:border-cyan-glow hover:text-cyan-glow"
               >

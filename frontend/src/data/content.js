@@ -183,8 +183,7 @@ export const contact = {
   heading: "Let's build something",
   socials: [
     { label: "Email", value: "richachandra07@gmail.com", href: "mailto:richachandra07@gmail.com" },
-    { label: "LinkedIn", value: "/in/kaimercer", href: "https://linkedin.com" },
-    { label: "Twitter", value: "@kaimercer", href: "https://twitter.com" },
-    { label: "Read.cv", value: "kaimercer", href: "https://read.cv" },
+    { label: "LinkedIn", value: "/in/richachandra7", href: "https://www.linkedin.com/in/richachandra7" },
+    { label: "Résumé", value: "View PDF", href: "/resume.pdf" },
   ],
 };
