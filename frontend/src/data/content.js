@@ -4,7 +4,7 @@ export const profile = {
   name: "Kaï Mercer",
   role: "Senior Product Manager",
   location: "Berlin — remote worldwide",
-  email: "hello@kaimercer.com",
+  email: "richachandra07@gmail.com",
   heroLines: ["Building products", "people can't", "put down."],
   tagline:
     "Product leader turning ambiguous problems into shipped, measurable, loved experiences.",
@@ -182,7 +182,7 @@ export const sideProjects = [
 export const contact = {
   heading: "Let's build something",
   socials: [
-    { label: "Email", value: "hello@kaimercer.com", href: "mailto:hello@kaimercer.com" },
+    { label: "Email", value: "richachandra07@gmail.com", href: "mailto:richachandra07@gmail.com" },
     { label: "LinkedIn", value: "/in/kaimercer", href: "https://linkedin.com" },
     { label: "Twitter", value: "@kaimercer", href: "https://twitter.com" },
     { label: "Read.cv", value: "kaimercer", href: "https://read.cv" },

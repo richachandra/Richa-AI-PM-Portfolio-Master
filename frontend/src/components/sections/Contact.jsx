@@ -1,4 +1,5 @@
 import { contact, profile } from "../../data/content";
+import { Download } from "lucide-react";
 import Reveal from "../shared/Reveal";
 import Magnetic from "../shared/Magnetic";
 
@@ -26,15 +27,26 @@ export const Contact = () => (
       <div className="mt-12 flex flex-col items-start justify-between gap-12 border-t border-white/10 pt-12 md:flex-row md:items-end">
         <div>
           <Reveal>
-            <Magnetic className="inline-block">
+            <div className="flex flex-wrap items-center gap-4">
+              <Magnetic className="inline-block">
+                <a
+                  href={`mailto:${profile.email}`}
+                  data-testid="contact-email-cta"
+                  className="inline-flex items-center gap-4 rounded-full bg-white px-8 py-5 font-head text-xl font-medium text-ink transition-colors duration-300 hover:bg-cyan-glow"
+                >
+                  {profile.email}
+                </a>
+              </Magnetic>
               <a
-                href={`mailto:${profile.email}`}
-                data-testid="contact-email-cta"
-                className="inline-flex items-center gap-4 rounded-full bg-white px-8 py-5 font-head text-xl font-medium text-ink transition-colors duration-300 hover:bg-cyan-glow"
+                href="/resume.pdf"
+                download="Kai-Mercer-Resume.pdf"
+                data-testid="download-resume-btn"
+                className="group inline-flex items-center gap-2.5 rounded-full border border-white/20 px-7 py-5 font-head text-base font-medium text-white transition-colors duration-300 hover:border-cyan-glow hover:text-cyan-glow"
               >
-                {profile.email}
+                <Download className="h-4 w-4 transition-transform duration-300 group-hover:translate-y-0.5" />
+                Download résumé
               </a>
-            </Magnetic>
+            </div>
           </Reveal>
           <Reveal delay={0.1}>
             <p className="mt-6 max-w-sm font-body text-sm text-white/50">
