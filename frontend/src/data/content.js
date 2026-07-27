@@ -33,14 +33,14 @@ export const about = {
   overline: "Who I am",
   heading: "I connect user desire, business value and what's technically possible.",
   body: [
-    "Over the last decade I've led product teams across fintech, developer tools and consumer AI — shipping features used by millions and building the operating rhythm that lets teams move fast without breaking trust.",
-    "I care about the craft of the product: the micro-copy, the empty states, the moment a user first feels the magic. Strategy is only as good as the pixels that ship.",
+    "I'm a Product Manager with 14+ years in financial services — spanning capital markets, credit cards and regulatory tech at firms like Morgan Stanley and JPMorgan Chase. I specialize in 0→1 product builds and platform modernization, turning complex, highly-regulated problems into clean products people actually adopt.",
+    "My work has lifted operational efficiency by 40%, tripled feature adoption and held 99.5%+ platform uptime — while shipping AI-powered tooling that cut resolution times by 35%. I care about the details that compound: the workflows, the edge cases and the trust a great product earns over time.",
   ],
   stats: [
-    { value: "10+", label: "Years in product" },
-    { value: "40M+", label: "Users reached" },
-    { value: "$120M", label: "Revenue influenced" },
-    { value: "6", label: "0→1 launches" },
+    { value: "14+", label: "Years in product" },
+    { value: "3", label: "0→1 launches" },
+    { value: "40%", label: "Efficiency gained" },
+    { value: "99.5%", label: "Platform uptime" },
   ],
 };
 
