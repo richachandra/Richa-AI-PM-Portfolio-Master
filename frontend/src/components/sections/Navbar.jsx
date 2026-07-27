@@ -42,7 +42,7 @@ export const Navbar = () => {
           </span>
         </button>
 
-        <div className="hidden items-center gap-1 lg:flex">
+        <div className="hidden items-center gap-1 md:flex">
           {navLinks.map((l) => (
             <button
               key={l.target}
