@@ -7,12 +7,28 @@ module.exports = {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        head: ['"Cabinet Grotesk"', 'sans-serif'],
+        body: ['"Satoshi"', 'sans-serif'],
+        mono: ['"JetBrains Mono"', 'monospace']
+      },
       borderRadius: {
         lg: 'var(--radius)',
         md: 'calc(var(--radius) - 2px)',
         sm: 'calc(var(--radius) - 4px)'
       },
       colors: {
+        ink: {
+          DEFAULT: '#050505',
+          surface: '#0A0A0A',
+          raised: '#111113'
+        },
+        cyan: {
+          glow: '#00F0FF'
+        },
+        magenta: {
+          glow: '#FF007A'
+        },
         background: 'hsl(var(--background))',
         foreground: 'hsl(var(--foreground))',
         card: {
@@ -70,11 +86,16 @@ module.exports = {
           to: {
             height: '0'
           }
+        },
+        'pulse-glow': {
+          '0%, 100%': { opacity: '0.4' },
+          '50%': { opacity: '1' }
         }
       },
       animation: {
         'accordion-down': 'accordion-down 0.2s ease-out',
-        'accordion-up': 'accordion-up 0.2s ease-out'
+        'accordion-up': 'accordion-up 0.2s ease-out',
+        'pulse-glow': 'pulse-glow 4s ease-in-out infinite'
       }
     }
   },
