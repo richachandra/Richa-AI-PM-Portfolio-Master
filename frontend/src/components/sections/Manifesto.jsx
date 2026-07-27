@@ -9,7 +9,7 @@ export const Manifesto = () => (
     data-testid="manifesto-section"
   >
     <div className="mx-auto max-w-7xl px-6 py-24 md:px-12 md:py-36">
-      <SectionHeading overline="Product Improvement">
+      <SectionHeading overline="Approach">
         {manifesto.heading}
       </SectionHeading>
 
