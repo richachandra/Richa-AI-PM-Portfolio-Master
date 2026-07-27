@@ -12,7 +12,7 @@ export const profile = {
 
 export const navLinks = [
   { label: "About", target: "about" },
-  { label: "Work", target: "work" },
+  { label: "Past Product Work", target: "work" },
   { label: "Case Studies", target: "case-studies" },
   { label: "Approach", target: "approach" },
   { label: "Contact", target: "contact" },
