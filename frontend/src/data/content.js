@@ -167,6 +167,51 @@ export const caseStudies = [
     reflection:
       "I'd pressure-test the ₹50 delivery guarantee against real dark-store capacity earlier, running a geo-fenced pilot before rollout to size the operational cost of the promise.",
   },
+  {
+    tag: "Product Strategy · SaaS Collaboration",
+    title: "Zoho — The Mid-Market Business OS",
+    oneLiner:
+      "Repositioning a feature-rich underdog into the category owner of the mid-market — the white space Google and Microsoft leave wide open.",
+    image:
+      "https://images.unsplash.com/photo-1600880292203-757bb62b4baf?crop=entropy&cs=srgb&fm=jpg&q=85&w=1600",
+    pdf: "/case-studies/zoho-business-os-strategy.pdf",
+    accent: "cyan",
+    problem:
+      "Zoho Mail has real product strengths — a deeply integrated ecosystem across email, CRM, finance and projects, strong SMB traction, and a privacy-first, cost-effective position — yet holds only ~1–1.5% of the collaboration market, dwarfed by Google Workspace (~43%) and Microsoft 365 (~38%). The gap isn't product quality — it's positioning. Mid-market enterprises (200–5,000 employees) are trapped between fragmented SMB tools and Microsoft's costly complexity, and no incumbent has claimed that white space. Four gaps stand in the way: weak privacy-centric collaboration, IT-dependent onboarding, confusing per-seat pricing, and AI limited to writing assistance rather than running the business.",
+    role: "Product Manager, deeply involved in Product Immersion.",
+    approachIntro:
+      "Prioritized the six identified problems by reach and severity rather than gut feel. The mid-market white space and the AI-workflow automation gap ranked highest — they define both who to target and why they'd switch — while onboarding friction, pricing complexity and brand perception ranked as more tactical, execution-level blockers to solve once that core positioning was set.",
+    solutions: [
+      {
+        detail:
+          "Package the suite as a unified Business OS — one cohesive system (email, CRM, finance, projects) instead of fragmented apps.",
+      },
+      {
+        detail:
+          "Evolve AI from writing assistant to a workflow automation engine: autonomous triage, task generation from email threads, and schedule automation.",
+      },
+      {
+        detail:
+          "Build a privacy-first workspace (encrypted email, secure docs, safe meetings) — leaning into Zoho's one structural edge over Google: no ad-based model.",
+      },
+      {
+        detail:
+          "Cut onboarding friction with a 5-minute automated setup and simplify pricing to team-based / usage-based.",
+      },
+      {
+        detail:
+          "Explicitly avoid competing head-on with Microsoft on scale or Google on UX — not a fight Zoho is positioned to win.",
+      },
+    ],
+    outcomeNote:
+      "This is a strategic recommendation rather than a shipped result, so success would be tracked going forward against:",
+    outcomes: [
+      { dir: "up", label: "Mid-market share growth (from ~1–1.5% today)" },
+      { dir: "up", label: "% of accounts onboarded in under 5 min without IT" },
+      { dir: "up", label: "AI agent adoption across active inboxes" },
+      { dir: "up", label: "Revenue from the privacy/compliance segment (Europe, fintech, healthcare)" },
+    ],
+  },
 ];
 
 export const manifesto = {

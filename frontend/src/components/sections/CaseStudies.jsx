@@ -15,7 +15,7 @@ const Label = ({ children, accent = false }) => (
   </span>
 );
 
-const CaseStudy = ({ cs }) => {
+const CaseStudy = ({ cs, testid }) => {
   const ref = useRef(null);
   const { scrollYProgress } = useScroll({
     target: ref,
@@ -23,12 +23,10 @@ const CaseStudy = ({ cs }) => {
   });
   const imgY = useTransform(scrollYProgress, [0, 1], ["-10%", "10%"]);
   const dot = cs.accent === "magenta" ? "bg-magenta-glow" : "bg-cyan-glow";
+  const hasTracks = cs.solutions?.some((s) => s.track);
 
   return (
-    <article
-      className="glass overflow-hidden rounded-3xl"
-      data-testid="case-study-licious"
-    >
+    <article className="glass overflow-hidden rounded-3xl" data-testid={testid}>
       {/* Hero */}
       <div ref={ref} className="relative h-64 overflow-hidden sm:h-80 lg:h-96">
         <motion.img
@@ -50,11 +48,13 @@ const CaseStudy = ({ cs }) => {
       </div>
 
       <div className="space-y-12 p-8 md:p-12">
-        <Reveal>
-          <p className="max-w-2xl font-body text-lg leading-relaxed text-white/70">
-            {cs.oneLiner}
-          </p>
-        </Reveal>
+        {cs.oneLiner && (
+          <Reveal>
+            <p className="max-w-2xl font-body text-lg leading-relaxed text-white/70">
+              {cs.oneLiner}
+            </p>
+          </Reveal>
+        )}
 
         {/* Problem + Role */}
         <div className="grid grid-cols-1 gap-10 border-t border-white/10 pt-10 md:grid-cols-2">
@@ -72,78 +72,112 @@ const CaseStudy = ({ cs }) => {
           </Reveal>
         </div>
 
-        {/* Approach — segments */}
+        {/* Approach */}
         <div className="border-t border-white/10 pt-10">
           <Reveal>
             <Label accent>Approach</Label>
-            <p className="mt-3 font-body text-[15px] text-white/60">
+            <p className="mt-3 max-w-3xl font-body text-[15px] leading-relaxed text-white/60">
               {cs.approachIntro}
             </p>
           </Reveal>
-          <div className="mt-6 grid grid-cols-1 gap-4 md:grid-cols-3">
-            {cs.segments.map((s, i) => (
-              <Reveal
-                key={s.name}
-                delay={i * 0.08}
-                className="rounded-2xl border border-white/10 bg-white/[0.02] p-6"
-                data-testid={`segment-${i}`}
-              >
-                <span className="font-mono text-xs text-cyan-glow">
-                  0{i + 1}
-                </span>
-                <h4 className="mt-3 font-head text-lg font-medium text-white">
-                  {s.name}
-                </h4>
-                <span className="mt-1 block font-mono text-[11px] uppercase tracking-widest text-white/40">
-                  {s.share}
-                </span>
-                <p className="mt-3 font-body text-sm leading-relaxed text-white/55">
-                  {s.need}
-                </p>
-              </Reveal>
-            ))}
-          </div>
 
-          <Reveal delay={0.1}>
-            <p className="mt-6 max-w-3xl font-body text-[15px] leading-relaxed text-white/55">
-              {cs.prioritization}
-            </p>
-          </Reveal>
+          {cs.segments && (
+            <div className="mt-6 grid grid-cols-1 gap-4 md:grid-cols-3">
+              {cs.segments.map((s, i) => (
+                <Reveal
+                  key={s.name}
+                  delay={i * 0.08}
+                  className="rounded-2xl border border-white/10 bg-white/[0.02] p-6"
+                  data-testid={`segment-${i}`}
+                >
+                  <span className="font-mono text-xs text-cyan-glow">0{i + 1}</span>
+                  <h4 className="mt-3 font-head text-lg font-medium text-white">
+                    {s.name}
+                  </h4>
+                  <span className="mt-1 block font-mono text-[11px] uppercase tracking-widest text-white/40">
+                    {s.share}
+                  </span>
+                  <p className="mt-3 font-body text-sm leading-relaxed text-white/55">
+                    {s.need}
+                  </p>
+                </Reveal>
+              ))}
+            </div>
+          )}
+
+          {cs.prioritization && (
+            <Reveal delay={0.1}>
+              <p className="mt-6 max-w-3xl font-body text-[15px] leading-relaxed text-white/55">
+                {cs.prioritization}
+              </p>
+            </Reveal>
+          )}
         </div>
 
         {/* Solutions */}
-        <div className="border-t border-white/10 pt-10">
-          <Reveal>
-            <Label accent>Solutions — two tracks</Label>
-          </Reveal>
-          <div className="mt-6 grid grid-cols-1 gap-4 md:grid-cols-2">
-            {cs.solutions.map((sol, i) => (
-              <Reveal
-                key={sol.track}
-                delay={i * 0.08}
-                className="rounded-2xl border border-white/10 bg-white/[0.02] p-6"
-                data-testid={`solution-${i}`}
-              >
-                <h4 className="font-head text-lg font-medium text-white">
-                  {sol.track}
-                </h4>
-                <p className="mt-3 font-body text-sm leading-relaxed text-white/55">
-                  {sol.detail}
+        {cs.solutions && (
+          <div className="border-t border-white/10 pt-10">
+            <Reveal>
+              <Label accent>{hasTracks ? "Solutions — two tracks" : "Solution"}</Label>
+            </Reveal>
+
+            {hasTracks ? (
+              <div className="mt-6 grid grid-cols-1 gap-4 md:grid-cols-2">
+                {cs.solutions.map((sol, i) => (
+                  <Reveal
+                    key={i}
+                    delay={i * 0.08}
+                    className="rounded-2xl border border-white/10 bg-white/[0.02] p-6"
+                    data-testid={`solution-${i}`}
+                  >
+                    <h4 className="font-head text-lg font-medium text-white">
+                      {sol.track}
+                    </h4>
+                    <p className="mt-3 font-body text-sm leading-relaxed text-white/55">
+                      {sol.detail}
+                    </p>
+                  </Reveal>
+                ))}
+              </div>
+            ) : (
+              <div className="mt-6 space-y-3">
+                {cs.solutions.map((sol, i) => (
+                  <Reveal
+                    key={i}
+                    delay={i * 0.05}
+                    className="flex gap-4 rounded-2xl border border-white/10 bg-white/[0.02] p-5"
+                    data-testid={`solution-${i}`}
+                  >
+                    <span className="mt-1 font-mono text-xs text-cyan-glow">
+                      0{i + 1}
+                    </span>
+                    <p className="font-body text-[15px] leading-relaxed text-white/60">
+                      {sol.detail}
+                    </p>
+                  </Reveal>
+                ))}
+              </div>
+            )}
+
+            {cs.precedent && (
+              <Reveal delay={0.12}>
+                <p className="mt-6 max-w-3xl font-body text-sm italic leading-relaxed text-white/45">
+                  {cs.precedent}
                 </p>
               </Reveal>
-            ))}
+            )}
           </div>
-          <Reveal delay={0.12}>
-            <p className="mt-6 max-w-3xl font-body text-sm italic leading-relaxed text-white/45">
-              {cs.precedent}
-            </p>
-          </Reveal>
-        </div>
+        )}
 
-        {/* Outcome target metrics */}
+        {/* Outcome */}
         <div className="border-t border-white/10 pt-10">
           <Reveal>
             <Label accent>Outcome — target metrics</Label>
+            {cs.outcomeNote && (
+              <p className="mt-3 max-w-3xl font-body text-[15px] leading-relaxed text-white/55">
+                {cs.outcomeNote}
+              </p>
+            )}
           </Reveal>
           <div className="mt-6 grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3">
             {cs.outcomes.map((o, i) => {
@@ -162,11 +196,7 @@ const CaseStudy = ({ cs }) => {
                         : "bg-magenta-glow/15 text-magenta-glow"
                     }`}
                   >
-                    {up ? (
-                      <ArrowUp className="h-4 w-4" />
-                    ) : (
-                      <ArrowDown className="h-4 w-4" />
-                    )}
+                    {up ? <ArrowUp className="h-4 w-4" /> : <ArrowDown className="h-4 w-4" />}
                   </span>
                   <span className="font-body text-sm leading-snug text-white/70">
                     {o.label}
@@ -177,31 +207,37 @@ const CaseStudy = ({ cs }) => {
           </div>
         </div>
 
-        {/* Core thesis pull-quote */}
-        <Reveal>
-          <div className="relative overflow-hidden rounded-2xl border border-white/10 bg-white/[0.03] p-8 md:p-10">
-            <div className="pointer-events-none absolute -right-16 -top-16 h-48 w-48 rounded-full bg-magenta-glow/20 blur-3xl" />
-            <Label accent>Core thesis</Label>
-            <p className="relative mt-4 max-w-2xl font-head text-2xl font-medium leading-snug tracking-tight text-white md:text-3xl">
-              {cs.thesis}
-            </p>
-          </div>
-        </Reveal>
+        {/* Core thesis */}
+        {cs.thesis && (
+          <Reveal>
+            <div className="relative overflow-hidden rounded-2xl border border-white/10 bg-white/[0.03] p-8 md:p-10">
+              <div className="pointer-events-none absolute -right-16 -top-16 h-48 w-48 rounded-full bg-magenta-glow/20 blur-3xl" />
+              <Label accent>Core thesis</Label>
+              <p className="relative mt-4 max-w-2xl font-head text-2xl font-medium leading-snug tracking-tight text-white md:text-3xl">
+                {cs.thesis}
+              </p>
+            </div>
+          </Reveal>
+        )}
 
         {/* Reflection + PDF */}
         <div className="flex flex-col items-start justify-between gap-8 border-t border-white/10 pt-10 md:flex-row md:items-center">
-          <Reveal className="border-l-2 border-magenta-glow/70 pl-5">
-            <Label>What I'd do differently</Label>
-            <p className="mt-2 max-w-lg font-body text-[15px] italic leading-relaxed text-white/60">
-              {cs.reflection}
-            </p>
-          </Reveal>
+          {cs.reflection ? (
+            <Reveal className="border-l-2 border-magenta-glow/70 pl-5">
+              <Label>What I'd do differently</Label>
+              <p className="mt-2 max-w-lg font-body text-[15px] italic leading-relaxed text-white/60">
+                {cs.reflection}
+              </p>
+            </Reveal>
+          ) : (
+            <span />
+          )}
           {cs.pdf && (
             <a
               href={cs.pdf}
               target="_blank"
               rel="noopener noreferrer"
-              data-testid="case-study-pdf-link"
+              data-testid={`${testid}-pdf-link`}
               className="group inline-flex shrink-0 items-center gap-2.5 rounded-full border border-white/20 px-6 py-3.5 font-head text-sm font-medium text-white transition-colors duration-300 hover:border-cyan-glow hover:text-cyan-glow"
             >
               <FileText className="h-4 w-4" />
@@ -226,8 +262,8 @@ export const CaseStudies = () => (
     </SectionHeading>
 
     <div className="mt-16 space-y-12">
-      {caseStudies.map((cs) => (
-        <CaseStudy key={cs.title} cs={cs} />
+      {caseStudies.map((cs, i) => (
+        <CaseStudy key={cs.title} cs={cs} testid={`case-study-${i}`} />
       ))}
     </div>
   </section>
