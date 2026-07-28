@@ -56,20 +56,20 @@ export const Contact = () => (
           </Reveal>
         </div>
 
-        <div className="grid grid-cols-2 gap-x-12 gap-y-5">
+        <div className="grid grid-cols-2 gap-x-8 gap-y-6 sm:grid-cols-3">
           {contact.socials.map((s, i) => (
-            <Reveal key={s.label} delay={0.05 * i}>
+            <Reveal key={s.label} delay={0.05 * i} className="min-w-0">
               <a
                 href={s.href}
                 target="_blank"
                 rel="noopener noreferrer"
                 data-testid={`social-${s.label.toLowerCase()}`}
-                className="group flex flex-col"
+                className="group flex min-w-0 flex-col"
               >
                 <span className="font-mono text-[11px] uppercase tracking-widest text-white/40">
                   {s.label}
                 </span>
-                <span className="font-body text-base text-white/80 transition-colors duration-300 group-hover:text-cyan-glow">
+                <span className="break-words font-body text-base text-white/80 transition-colors duration-300 group-hover:text-cyan-glow">
                   {s.value}
                 </span>
               </a>
