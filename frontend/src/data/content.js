@@ -108,24 +108,64 @@ export const pastWork = [
 
 export const caseStudies = [
   {
-    tag: "Retention",
-    title: "Turning churn into a growth loop",
-    metric: "+27% 90-day retention",
-    description:
-      "A deep-dive into how we redesigned the activation journey for a consumer AI product, tying every step to a measurable habit.",
+    tag: "Product Strategy · Q-Commerce",
+    title: "Licious — Predictable Meat Logistics",
+    oneLiner:
+      "Turning fixed weekly routines into a logistics optimization engine through flexible subscriptions and provable delivery trust.",
     image:
-      "https://images.unsplash.com/photo-1510717029971-27681a0e9da9?crop=entropy&cs=srgb&fm=jpg&q=85&w=1000",
-    accent: "cyan",
-  },
-  {
-    tag: "Monetization",
-    title: "Pricing that doubled ARPU",
-    metric: "2.1× revenue per user",
-    description:
-      "Rearchitecting a freemium model with usage-based tiers, willingness-to-pay research and a frictionless upgrade path.",
-    image:
-      "https://images.unsplash.com/photo-1531297484001-80022131f5a1?crop=entropy&cs=srgb&fm=jpg&q=85&w=1000",
+      "https://images.unsplash.com/photo-1607623814075-e51df1bdc82f?crop=entropy&cs=srgb&fm=jpg&q=85&w=1600",
+    pdf: "/case-studies/predictable-meat-logistics.pdf",
     accent: "magenta",
+    problem:
+      "Customers with fixed weekly routines (chicken every Sunday, fish every Wednesday) kept experiencing unpredictable delivery — not because delivery was slow, but because the app had no way to schedule recurring staple orders. Every weekly routine was treated as fresh, unplanned demand, creating cascading issues: overlapping routing, rider wastage, and the #1 voiced complaint across the user base — unpredictable delivery windows. Repeat buyers churned as a result.",
+    role:
+      "Led the product strategy working session. Defined the problem, segmented users by occasion, prioritized solutions by impact, and designed the subscription and delivery-reliability features.",
+    approachIntro: "Segmented demand into three distinct user occasions:",
+    segments: [
+      {
+        name: "The Impulse Cook",
+        share: "~55% of users",
+        need: "Wants speed and zero friction.",
+      },
+      {
+        name: "The Household Planner",
+        share: "Core mid-segment",
+        need: "Needs precision on timing and trust.",
+      },
+      {
+        name: "The Creature of Habit",
+        share: "Top 10–15% of repeaters",
+        need: "Needs predictability with zero admin.",
+      },
+    ],
+    prioritization:
+      "Prioritized using Impact = Reach × Severity. The top two problems — no recurring-order scheduling and unpredictable delivery windows — ranked highest because solving them mathematically buys down all downstream issues (wastage, churn, support tickets).",
+    solutions: [
+      {
+        track: "Delivery trust",
+        detail:
+          "Provable delivery-by guarantees tied to financial penalties (₹50 cashback if missed), shown only when operationally feasible. Proactive delay alerts before customers complain.",
+      },
+      {
+        track: "Scheduled demand",
+        detail:
+          "A flexible weekly/custom-day subscription layer (editable, skippable) layered onto the existing Infiniti membership — not sold separately. One-tap \u201Crepeat this every week\u201D surfaced from past staple purchases to formalize habits that already exist.",
+      },
+    ],
+    precedent:
+      "Precedent check: ButcherBox and FreshToHome both show that rigid meat-only subscription boxes erode under cost pressure. The strategy kept the subscription layer small, flexible, and purpose-built for dark-store demand predictability.",
+    outcomes: [
+      { dir: "up", label: "On-Time Delivery Rate" },
+      { dir: "up", label: "% of Orders on Subscription" },
+      { dir: "up", label: "Repeat Order Rate (retention via trust)" },
+      { dir: "down", label: "Delivery Cost / Order (batching & route density)" },
+      { dir: "down", label: "Delivery Support Tickets" },
+      { dir: "up", label: "Net Promoter Score" },
+    ],
+    thesis:
+      "Subscription is not just a revenue feature — it is a logistics optimization feature. Not faster. More reliable.",
+    reflection:
+      "I'd pressure-test the ₹50 delivery guarantee against real dark-store capacity earlier, running a geo-fenced pilot before rollout to size the operational cost of the promise.",
   },
 ];
 
