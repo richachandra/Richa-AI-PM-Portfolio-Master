@@ -4,6 +4,17 @@ import { pastWork } from "../../data/content";
 import SectionHeading from "../shared/SectionHeading";
 import Reveal from "../shared/Reveal";
 
+const Block = ({ label, children }) => (
+  <div>
+    <span className="font-mono text-[11px] uppercase tracking-[0.25em] text-white/35">
+      {label}
+    </span>
+    <p className="mt-2 font-body text-[15px] leading-relaxed text-white/65">
+      {children}
+    </p>
+  </div>
+);
+
 const WorkItem = ({ item, flip }) => {
   const ref = useRef(null);
   const { scrollYProgress } = useScroll({
@@ -15,52 +26,88 @@ const WorkItem = ({ item, flip }) => {
   return (
     <div
       ref={ref}
-      className={`grid grid-cols-1 items-center gap-8 md:grid-cols-12 ${
-        flip ? "md:[direction:rtl]" : ""
-      }`}
+      className="grid grid-cols-1 gap-8 lg:grid-cols-12 lg:gap-12"
       data-testid={`work-item-${item.index}`}
     >
-      {/* Image frame */}
-      <Reveal
-        y={60}
-        className="md:col-span-7 md:[direction:ltr]"
-      >
-        <div className="group relative aspect-[16/10] overflow-hidden rounded-2xl border border-white/10">
-          <motion.img
-            style={{ y: imgY, scale: 1.2 }}
-            src={item.image}
-            alt={item.title}
-            className="absolute inset-0 h-full w-full object-cover"
-          />
-          <div className="absolute inset-0 bg-gradient-to-t from-ink/70 via-transparent to-transparent" />
-          <div className="absolute inset-0 bg-[radial-gradient(80%_80%_at_50%_20%,transparent,rgba(5,5,5,0.5))]" />
-          <span className="absolute left-5 top-4 font-mono text-xs tracking-widest text-white/70">
-            {item.year}
-          </span>
-        </div>
-      </Reveal>
+      {/* Sticky cinematic image */}
+      <div className={`lg:col-span-5 ${flip ? "lg:order-2" : ""}`}>
+        <Reveal y={60}>
+          <div className="group relative aspect-[4/3] overflow-hidden rounded-2xl border border-white/10 lg:sticky lg:top-28">
+            <motion.img
+              style={{ y: imgY, scale: 1.2 }}
+              src={item.image}
+              alt={item.title}
+              className="absolute inset-0 h-full w-full object-cover"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-ink/80 via-transparent to-transparent" />
+            <div className="absolute inset-0 bg-[radial-gradient(80%_80%_at_50%_15%,transparent,rgba(5,5,5,0.55))]" />
+            <span className="absolute left-5 top-4 glass rounded-full px-3 py-1 font-mono text-[11px] uppercase tracking-widest text-white/80">
+              {item.category}
+            </span>
+          </div>
+        </Reveal>
+      </div>
 
-      {/* Meta */}
-      <div className="md:col-span-5 md:[direction:ltr] md:px-6">
+      {/* Case study content */}
+      <div className={`lg:col-span-7 ${flip ? "lg:order-1" : ""}`}>
         <Reveal>
           <span className="font-head text-6xl font-bold text-stroke lg:text-7xl">
             {item.index}
           </span>
         </Reveal>
-        <Reveal delay={0.08}>
-          <p className="mt-4 font-mono text-xs uppercase tracking-[0.25em] text-cyan-glow">
-            {item.category}
-          </p>
-        </Reveal>
-        <Reveal delay={0.12}>
-          <h3 className="mt-3 font-head text-3xl font-medium tracking-tight text-white lg:text-4xl">
+        <Reveal delay={0.06}>
+          <h3 className="mt-4 font-head text-3xl font-medium leading-tight tracking-tight text-white lg:text-4xl">
             {item.title}
           </h3>
         </Reveal>
+
+        <div className="mt-8 space-y-6">
+          <Reveal delay={0.08}>
+            <Block label="Problem">{item.problem}</Block>
+          </Reveal>
+          <Reveal delay={0.1}>
+            <Block label="My role">{item.role}</Block>
+          </Reveal>
+          <Reveal delay={0.12}>
+            <Block label="Approach">{item.approach}</Block>
+          </Reveal>
+        </div>
+
+        {/* Outcomes */}
+        <Reveal delay={0.14}>
+          <div className="mt-8">
+            <span className="font-mono text-[11px] uppercase tracking-[0.25em] text-cyan-glow">
+              Outcome
+            </span>
+            <div className="mt-4 grid grid-cols-2 gap-3 sm:grid-cols-2">
+              {item.outcomes.map((o, i) => (
+                <div
+                  key={i}
+                  className="glass rounded-xl p-4"
+                  data-testid={`work-outcome-${item.index}-${i}`}
+                >
+                  <div className="font-head text-2xl font-bold tracking-tight text-white lg:text-3xl">
+                    {o.value}
+                  </div>
+                  <div className="mt-1 font-body text-xs leading-snug text-white/50">
+                    {o.label}
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </Reveal>
+
+        {/* Reflection */}
         <Reveal delay={0.16}>
-          <p className="mt-4 max-w-md font-body text-base leading-relaxed text-white/55">
-            {item.blurb}
-          </p>
+          <div className="mt-8 border-l-2 border-magenta-glow/70 pl-5">
+            <span className="font-mono text-[11px] uppercase tracking-[0.25em] text-white/35">
+              What I'd do differently
+            </span>
+            <p className="mt-2 max-w-lg font-body text-[15px] italic leading-relaxed text-white/60">
+              {item.reflection}
+            </p>
+          </div>
         </Reveal>
       </div>
     </div>
@@ -77,7 +124,7 @@ export const PastWork = () => (
       Products I've shipped<br className="hidden sm:block" /> and scaled.
     </SectionHeading>
 
-    <div className="mt-20 space-y-24 md:space-y-32">
+    <div className="mt-20 space-y-28 md:space-y-36">
       {pastWork.map((item, i) => (
         <WorkItem key={item.index} item={item} flip={i % 2 === 1} />
       ))}

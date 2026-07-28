@@ -65,33 +65,44 @@ export const skills = [
 export const pastWork = [
   {
     index: "01",
-    title: "Aperture Analytics",
-    category: "B2B SaaS · Dashboard",
-    year: "2024",
-    blurb:
-      "Rebuilt the core analytics surface into a real-time command center, lifting daily active usage by 38%.",
+    title: "German Tax Reporting Modernization",
+    category: "Regulatory Tech",
+    problem:
+      "Legacy tax reporting infrastructure couldn't meet evolving German regulatory requirements, putting 50K+ accounts at compliance risk.",
+    role:
+      "Defined product strategy and led end-to-end delivery of the modernization platform.",
+    approach:
+      "Owned discovery, user research and VOC synthesis across 8 stakeholder groups. Translated insights into a prioritized roadmap that reduced feature rework and improved team velocity.",
+    outcomes: [
+      { value: "100%", label: "Regulatory compliance achieved" },
+      { value: "60%", label: "Reduction in audit escalations" },
+      { value: "50%", label: "Cut in feature rework" },
+      { value: "25%", label: "Improvement in sprint velocity" },
+    ],
+    reflection:
+      "I'd invest earlier in an automated regression suite for the compliance rules — it would have de-risked releases and let the team ship regulatory changes even faster.",
     image:
-      "https://images.unsplash.com/photo-1551288049-bebda4e38f71?crop=entropy&cs=srgb&fm=jpg&q=85&w=1400",
+      "https://images.unsplash.com/photo-1554224155-6726b3ff858f?crop=entropy&cs=srgb&fm=jpg&q=85&w=1400",
   },
   {
     index: "02",
-    title: "Nova Mobile Banking",
-    category: "Fintech · iOS & Android",
-    year: "2023",
-    blurb:
-      "Led the 0→1 launch of a challenger banking app — from concept to 1.2M onboarded users in 9 months.",
+    title: "Credit Card Onboarding Platform",
+    category: "Credit Cards",
+    problem:
+      "Manual onboarding workflows were slow and labour-intensive, delaying new card launches and consuming hundreds of hours of processing time each quarter.",
+    role:
+      "Owned and launched the credit card onboarding product roadmap end-to-end. Served as Area Product Owner across 3 squads.",
+    approach:
+      "Automated key onboarding workflows to eliminate manual processing. Managed the product backlog with a focus on story readiness and acceptance quality to keep squads moving at pace.",
+    outcomes: [
+      { value: "400+", label: "Hours/quarter of manual processing eliminated" },
+      { value: "25%", label: "Reduction in time-to-market for new launches" },
+      { value: "92%", label: "Sprint completion rate" },
+    ],
+    reflection:
+      "I'd bring engineering into discovery sooner to shape the automation architecture up front, avoiding a mid-build rework of the workflow engine.",
     image:
-      "https://images.unsplash.com/photo-1510717029971-27681a0e9da9?crop=entropy&cs=srgb&fm=jpg&q=85&w=1400",
-  },
-  {
-    index: "03",
-    title: "Loop Developer Cloud",
-    category: "DevTools · Platform",
-    year: "2022",
-    blurb:
-      "Shipped a self-serve onboarding flow that cut time-to-first-deploy from 40 minutes to under 4.",
-    image:
-      "https://images.unsplash.com/photo-1525547719571-a2d4ac8945e2?crop=entropy&cs=srgb&fm=jpg&q=85&w=1400",
+      "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?crop=entropy&cs=srgb&fm=jpg&q=85&w=1400",
   },
 ];
 
