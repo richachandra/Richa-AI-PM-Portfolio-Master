@@ -56,7 +56,7 @@ export const Contact = () => (
           </Reveal>
         </div>
 
-        <div className="grid grid-cols-2 gap-x-8 gap-y-6 sm:grid-cols-3">
+        <div className="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-3">
           {contact.socials.map((s, i) => (
             <Reveal key={s.label} delay={0.05 * i} className="min-w-0">
               <a
