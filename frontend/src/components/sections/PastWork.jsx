@@ -73,23 +73,23 @@ const WorkItem = ({ item, flip }) => {
           </Reveal>
         </div>
 
-        {/* Outcomes */}
+        {/* Key Results */}
         <Reveal delay={0.14}>
-          <div className="mt-8">
+          <div className="mt-10">
             <span className="font-mono text-[11px] uppercase tracking-[0.25em] text-cyan-glow">
-              Outcome
+              Key Results
             </span>
-            <div className="mt-4 grid grid-cols-2 gap-3 sm:grid-cols-2">
+            <div className="mt-5 grid grid-cols-2 gap-x-6 gap-y-8 sm:grid-cols-2 lg:grid-cols-4">
               {item.outcomes.map((o, i) => (
                 <div
                   key={i}
-                  className="glass rounded-xl p-4"
+                  className="border-l-2 border-cyan-glow/60 pl-4"
                   data-testid={`work-outcome-${item.index}-${i}`}
                 >
-                  <div className="font-head text-2xl font-bold tracking-tight text-white lg:text-3xl">
+                  <div className="font-head text-4xl font-bold leading-none tracking-tighter text-white lg:text-5xl">
                     {o.value}
                   </div>
-                  <div className="mt-1 font-body text-xs leading-snug text-white/50">
+                  <div className="mt-3 font-body text-xs leading-snug text-white/50">
                     {o.label}
                   </div>
                 </div>
