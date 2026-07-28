@@ -140,6 +140,7 @@ export const caseStudies = [
     ],
     prioritization:
       "Prioritized using Impact = Reach × Severity. The top two problems — no recurring-order scheduling and unpredictable delivery windows — ranked highest because solving them mathematically buys down all downstream issues (wastage, churn, support tickets).",
+    solutionsLabel: "Solutions — two tracks",
     solutions: [
       {
         track: "Delivery trust",
@@ -211,6 +212,80 @@ export const caseStudies = [
       { dir: "up", label: "AI agent adoption across active inboxes" },
       { dir: "up", label: "Revenue from the privacy/compliance segment (Europe, fintech, healthcare)" },
     ],
+  },
+  {
+    tag: "AI Product Strategy · Multi-Agent Marketplace",
+    title: "My Kitchen — A Multi-Agent Home-Chef Marketplace",
+    oneLiner:
+      "A multi-agent system that reliably matches home chefs with customers by breaking the order lifecycle into purpose-built agents — each designed to fail gracefully.",
+    image:
+      "https://images.unsplash.com/photo-1556910103-1c02745aae4d?crop=entropy&cs=srgb&fm=jpg&q=85&w=1600",
+    pdf: "/case-studies/multi-agent-marketplace-strategy.pdf",
+    accent: "magenta",
+    problem:
+      "Home-chef marketplaces sit at an unusually high-stakes intersection: food safety, real-time logistics, and deeply variable, unstructured input — a chef describing their menu by voice or text, in their own words, rather than filling out a rigid form. Most platforms solve this with manual moderation and structured onboarding forms, which makes them slow to onboard new chefs and brittle at scale.",
+    role:
+      "AI Product Manager — scoped the agent architecture, defined a per-agent evaluation metric for each stage, and designed the graceful-degradation model so no single agent can break the marketplace.",
+    approachIntro:
+      "Anchored the system design in three distinct user occasions, each with a non-negotiable core need:",
+    segments: [
+      {
+        name: "The Home Chef",
+        share: "Supply side",
+        need: "\u201CThe platform does the structuring work, not me.\u201D",
+      },
+      {
+        name: "The Safety-Conscious Customer",
+        share: "Demand · Trust",
+        need: "\u201CA hard guarantee, not a best-effort filter.\u201D",
+      },
+      {
+        name: "The Time-Pressed Local Buyer",
+        share: "Demand · Speed",
+        need: "\u201CA kitchen with real capacity to fulfil the order.\u201D",
+      },
+    ],
+    solutionsLabel: "Solution — five purpose-built agents",
+    solutions: [
+      {
+        track: "Menu Intelligence Agent",
+        detail:
+          "Chef onboarding & listing — converts voice or free-text menu descriptions into structured, searchable menu data.",
+      },
+      {
+        track: "Dietary Safety Agent",
+        detail:
+          "Customer safety — filters listings and orders against allergens and dietary restrictions, enforcing safety structurally rather than as a best-effort filter.",
+      },
+      {
+        track: "Conflict & Availability Agent",
+        detail:
+          "Checkout & scheduling — resolves scheduling and capacity conflicts before an order is ever confirmed.",
+      },
+      {
+        track: "Order Routing & Batching Agent",
+        detail:
+          "Operations & logistics — assigns and batches orders across chefs so one kitchen isn't overloaded while another sits idle.",
+      },
+      {
+        track: "Feedback Synthesis Agent",
+        detail:
+          "Post-order improvement — turns raw customer feedback into structured signal that measurably improves the next listing.",
+      },
+    ],
+    outcomeNote:
+      "Each agent is scoped to one job and evaluated on its own metric, so success is tracked per-agent going forward against:",
+    outcomes: [
+      { dir: "down", label: "False-negative rate on flagged allergens (Dietary Safety)" },
+      { dir: "up", label: "Onboarding sessions completed without manual staff intervention (Menu Intelligence)" },
+      { dir: "up", label: "Reduction in post-checkout cancellations from capacity conflicts (Conflict & Availability)" },
+      { dir: "down", label: "Kitchen utilization variance across active chefs (Routing & Batching)" },
+      { dir: "up", label: "Structured feedback signals that lead to a measurable listing change (Feedback Synthesis)" },
+    ],
+    thesis:
+      "Every agent in this system is scoped to one job, evaluated on its own, and built to fail without breaking the marketplace around it.",
+    reflection:
+      "I'd stand up an offline evaluation harness for each agent before wiring them together — measuring false-negative and utilization-variance metrics in isolation before trusting the orchestration layer.",
   },
 ];
 

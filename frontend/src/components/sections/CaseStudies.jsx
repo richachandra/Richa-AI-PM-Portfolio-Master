@@ -118,7 +118,7 @@ const CaseStudy = ({ cs, testid }) => {
         {cs.solutions && (
           <div className="border-t border-white/10 pt-10">
             <Reveal>
-              <Label accent>{hasTracks ? "Solutions — two tracks" : "Solution"}</Label>
+              <Label accent>{cs.solutionsLabel || (hasTracks ? "Solutions" : "Solution")}</Label>
             </Reveal>
 
             {hasTracks ? (
