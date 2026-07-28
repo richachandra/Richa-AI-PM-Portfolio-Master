@@ -38,7 +38,7 @@ export const about = {
   ],
   stats: [
     { value: "14+", label: "Years in product" },
-    { value: "3", label: "0→1 launches" },
+    { value: "PSPO & PSM", label: "Certified" },
     { value: "99.5%", label: "Platform uptime" },
   ],
 };
