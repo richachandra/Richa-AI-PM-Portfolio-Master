@@ -222,6 +222,7 @@ export const caseStudies = [
     image:
       "https://images.unsplash.com/photo-1556910103-1c02745aae4d?crop=entropy&cs=srgb&fm=jpg&q=85&w=1600",
     pdf: "/case-studies/multi-agent-marketplace-strategy.pdf",
+    wip: true,
     accent: "magenta",
     problem:
       "Home-chef marketplaces sit at an unusually high-stakes intersection: food safety, real-time logistics, and deeply variable, unstructured input — a chef describing their menu by voice or text, in their own words, rather than filling out a rigid form. Most platforms solve this with manual moderation and structured onboarding forms, which makes them slow to onboard new chefs and brittle at scale.",

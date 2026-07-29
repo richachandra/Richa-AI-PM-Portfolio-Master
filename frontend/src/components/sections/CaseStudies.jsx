@@ -36,6 +36,14 @@ const CaseStudy = ({ cs, testid }) => {
           className="absolute inset-0 h-full w-full object-cover"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-ink via-ink/50 to-transparent" />
+        {cs.wip && (
+          <span
+            data-testid="wip-badge"
+            className="absolute right-6 top-6 z-10 rounded-full border border-emerald-400/50 bg-emerald-400/10 px-4 py-1.5 font-mono text-xs font-semibold uppercase tracking-[0.2em] text-emerald-400 backdrop-blur-sm"
+          >
+            WIP
+          </span>
+        )}
         <div className="absolute inset-x-0 bottom-0 p-8 md:p-12">
           <span className="flex items-center gap-2 font-mono text-xs uppercase tracking-[0.25em] text-white/80">
             <span className={`h-1.5 w-1.5 rounded-full ${dot}`} />
