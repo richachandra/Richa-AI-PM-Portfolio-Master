@@ -14,6 +14,7 @@ export const navLinks = [
   { label: "About", target: "about" },
   { label: "Past Product Work", target: "work" },
   { label: "Case Studies", target: "case-studies" },
+  { label: "Side Projects", target: "side-projects" },
   { label: "Approach", target: "approach" },
   { label: "Contact", target: "contact" },
 ];
