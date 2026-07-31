@@ -442,9 +442,9 @@ export const sideProjects = [
     wip: true,
   },
   {
-    title: "Palette Radio",
-    stack: ["Swift", "CoreML"],
-    blurb: "Generates color palettes from the mood of any song you're listening to.",
+    title: "Google Review Generator App",
+    stack: [],
+    blurb: "Generate reviews with the least clicks possible.",
   },
   {
     title: "Standup Bot",
