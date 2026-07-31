@@ -1,8 +1,7 @@
 import { about } from "../../data/content";
 import Reveal from "../shared/Reveal";
 
-const PORTRAIT =
-  "https://images.unsplash.com/photo-1532171875345-9712d9d4f65a?crop=entropy&cs=srgb&fm=jpg&q=85&w=1200";
+const PORTRAIT = "/images/richa-headshot.png";
 
 export const About = () => (
   <section
@@ -17,8 +16,8 @@ export const About = () => (
           <div className="absolute inset-0 z-10 bg-[radial-gradient(70%_60%_at_50%_0%,transparent,rgba(5,5,5,0.55))]" />
           <img
             src={PORTRAIT}
-            alt="Portrait of Kaï Mercer"
-            className="aspect-[4/5] w-full object-cover grayscale transition-all duration-700 group-hover:grayscale-0"
+            alt="Portrait of Richa Chandra"
+            className="aspect-[4/5] w-full object-cover object-top transition-transform duration-700 group-hover:scale-[1.03]"
             data-testid="about-portrait"
           />
           <div className="absolute bottom-5 left-5 z-20 glass rounded-full px-4 py-2">
