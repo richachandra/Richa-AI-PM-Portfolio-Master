@@ -445,6 +445,7 @@ export const sideProjects = [
     title: "Google Review Generator App",
     stack: [],
     blurb: "Generate reviews with the least clicks possible.",
+    wip: true,
   },
   {
     title: "Standup Bot",
