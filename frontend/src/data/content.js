@@ -430,9 +430,9 @@ export const manifesto = {
 
 export const sideProjects = [
   {
-    title: "Framer of Mind",
-    stack: ["React", "Motion", "OpenAI"],
-    blurb: "A daily journaling app that reframes anxious thoughts using CBT prompts.",
+    title: "Multi LLM Comparison",
+    stack: ["Next.js", "Supabase", "OpenRouter", "Vercel"],
+    blurb: "Gets questions answered from multiple LLMs at the same time.",
   },
   {
     title: "Shipd",
