@@ -34,9 +34,19 @@ export const SideProjects = () => (
             data-testid={`side-project-${i}`}
           >
             <div>
-              <h3 className="font-head text-xl font-medium text-white">
-                {p.title}
-              </h3>
+              <div className="flex items-center gap-3">
+                <h3 className="font-head text-xl font-medium text-white">
+                  {p.title}
+                </h3>
+                {p.wip && (
+                  <span
+                    data-testid={`side-project-${i}-wip`}
+                    className="rounded-full border border-emerald-400/50 bg-emerald-400/10 px-2.5 py-0.5 font-mono text-[10px] font-semibold uppercase tracking-[0.2em] text-emerald-400"
+                  >
+                    WIP
+                  </span>
+                )}
+              </div>
               <p className="mt-2 max-w-xs font-body text-sm leading-relaxed text-white/50">
                 {p.blurb}
               </p>

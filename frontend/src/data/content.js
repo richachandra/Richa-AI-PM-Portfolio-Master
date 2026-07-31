@@ -433,11 +433,13 @@ export const sideProjects = [
     title: "Multi LLM Comparison",
     stack: ["Next.js", "Supabase", "OpenRouter", "Vercel"],
     blurb: "A single-user web app for chatting with multiple LLMs at once and comparing their answers side by side — with per-response cost, token, and latency data.",
+    wip: true,
   },
   {
     title: "LLM as a Judge",
     stack: ["Supabase", "OpenRouter", "Vercel", "PostHog"],
     blurb: "Gets answers from multiple LLMs and returns the verdict.",
+    wip: true,
   },
   {
     title: "Palette Radio",
