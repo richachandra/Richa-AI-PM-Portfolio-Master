@@ -435,9 +435,9 @@ export const sideProjects = [
     blurb: "A single-user web app for chatting with multiple LLMs at once and comparing their answers side by side — with per-response cost, token, and latency data.",
   },
   {
-    title: "Shipd",
-    stack: ["Next.js", "Postgres", "Stripe"],
-    blurb: "A tiny changelog tool for indie makers who hate writing changelogs.",
+    title: "LLM as a Judge",
+    stack: ["Supabase", "OpenRouter", "Vercel", "PostHog"],
+    blurb: "Gets answers from multiple LLMs and returns the verdict.",
   },
   {
     title: "Palette Radio",
