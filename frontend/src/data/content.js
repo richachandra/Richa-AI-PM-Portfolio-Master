@@ -216,7 +216,8 @@ export const caseStudies = [
   },
 ];
 
-export const sideProjectFeature = {
+export const sideProjectFeatures = [
+  {
   tag: "AI Product Strategy · Multi-Agent Marketplace",
   title: "My Kitchen — A Multi-Agent Home-Chef Marketplace",
   oneLiner:
@@ -290,7 +291,105 @@ export const sideProjectFeature = {
     "Every agent in this system is scoped to one job, evaluated on its own, and built to fail without breaking the marketplace around it.",
   reflection:
     "I'd stand up an offline evaluation harness for each agent before wiring them together — measuring false-negative and utilization-variance metrics in isolation before trusting the orchestration layer.",
-};
+  },
+  {
+    tag: "AI Product Strategy · Consumer Health",
+    title: "ProteinGPT — Your Protein Recommendation Engine",
+    oneLiner:
+      "An AI guide that cuts through a confusing, adulteration-prone supplement market to deliver personalized, trustable protein recommendations.",
+    image:
+      "https://images.unsplash.com/photo-1593095948071-474c5cc2989d?crop=entropy&cs=srgb&fm=jpg&q=85&w=1600",
+    pdf: "/case-studies/proteingpt-strategic-blueprint.pdf",
+    accent: "magenta",
+    problem:
+      "Buyers face decision paralysis in a vast, complex protein-supplement market riddled with adulteration, mislabeling and contradictory dietary advice — leaving them overwhelmed and unable to trust product claims.",
+    role:
+      "Product Manager — prioritized the core value blockers (trust and decision speed), segmented buyers by intent, and defined the product bets and success metrics.",
+    approachIntro:
+      "Prioritized the biggest value-proposition blockers — trust and decision speed — then segmented demand into six distinct buyer personas, each with a different definition of \u201Ca good recommendation\u201D:",
+    segments: [
+      {
+        name: "The Overwhelmed Beginner",
+        share: "New lifters",
+        need: "Simple guidance for a goal like \u201Cskinny guy who wants to gain weight fast.\u201D",
+      },
+      {
+        name: "The Budget Optimizer",
+        share: "Price-sensitive",
+        need: "Value-for-money — \u201Cbest whey under \u20B92000.\u201D",
+      },
+      {
+        name: "The Restricted Shopper",
+        share: "Dietary limits",
+        need: "Vegan/lactose/keto/allergen filtering that catches contradictions.",
+      },
+      {
+        name: "The Skeptical Label-Reader",
+        share: "Trust-driven",
+        need: "Verifiable trust signals — certs and lab data, not marketing.",
+      },
+      {
+        name: "The Medically Cautious User",
+        share: "Health conditions",
+        need: "Safe refusal and a redirect to a doctor.",
+      },
+      {
+        name: "The Repeat Buyer",
+        share: "Returning",
+        need: "Continuity and memory across visits for restocking or switching.",
+      },
+    ],
+    solutionsLabel: "Solution — six product bets",
+    solutions: [
+      {
+        track: "Catalogue Expansion",
+        detail:
+          "Automate product-data pulls from retailer APIs (Amazon, Flipkart, Nutrabay) to scale breadth without manual entry.",
+      },
+      {
+        track: "Buy-Now / Affiliate Deep Links",
+        detail:
+          "Direct purchase paths via affiliate redirects to close the loop from recommendation to purchase.",
+      },
+      {
+        track: "Certification / Verification Layer",
+        detail:
+          "Surface verifiable trust signals — FSSAI registration and third-party lab data — and visibly flag unverified claims.",
+      },
+      {
+        track: "Live Pricing Pipeline",
+        detail:
+          "Scheduled scrapes and webhooks to sync real-time price and stock.",
+      },
+      {
+        track: "Persistent User Profile",
+        detail:
+          "Store goal, diet, budget and allergies behind an auth layer so returning users skip the setup.",
+      },
+      {
+        track: "Expanded Medical Guardrails",
+        detail:
+          "Broaden the condition list and add a general \u201Cconsult a doctor\u201D fallback for safety.",
+      },
+    ],
+    outcomeNote:
+      "This is a forward-looking product strategy, so success would be tracked going forward against:",
+    outcomes: [
+      { dir: "up", label: "Activation — % of sessions reaching a concrete top-pick recommendation" },
+      { dir: "up", label: "Coverage — % of queries answered from catalogue vs. \u201Cnot found\u201D" },
+      { dir: "up", label: "Trust — click-through from recommendation → product detail (+ per-response rating)" },
+      { dir: "up", label: "Conversion — click-through to buy-now and downstream purchase" },
+      { dir: "up", label: "Retention — returning users per month & repeat sessions" },
+      { dir: "up", label: "Safety — audited accuracy of medical-condition refusals (hold ~100%)" },
+      { dir: "down", label: "Price accuracy — variance between displayed and live retailer price" },
+      { dir: "up", label: "Qualitative — NPS / in-chat feedback after each recommendation" },
+    ],
+    thesis:
+      "Close the market's trust and decision-friction gaps, and ProteinGPT becomes the indispensable AI guide for confident, convenient supplement purchases.",
+    reflection:
+      "I'd validate the affiliate-conversion assumption with a lightweight clickable prototype before investing in the live-pricing and catalogue-automation pipelines — the trust layer only pays off if users actually buy.",
+  },
+];
 
 export const manifesto = {
   overline: "How I work",

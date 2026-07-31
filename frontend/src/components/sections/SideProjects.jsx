@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { ArrowUpRight } from "lucide-react";
-import { sideProjects, sideProjectFeature } from "../../data/content";
+import { sideProjects, sideProjectFeatures } from "../../data/content";
 import SectionHeading from "../shared/SectionHeading";
 import Reveal from "../shared/Reveal";
 import { CaseStudy } from "./CaseStudies";
@@ -15,9 +15,11 @@ export const SideProjects = () => (
       Things I build<br className="hidden sm:block" /> on weekends.
     </SectionHeading>
 
-    {/* Featured project — full case-study structure */}
-    <div className="mt-16">
-      <CaseStudy cs={sideProjectFeature} testid="side-project-feature" />
+    {/* Featured projects — full case-study structure */}
+    <div className="mt-16 space-y-12">
+      {sideProjectFeatures.map((cs, i) => (
+        <CaseStudy key={cs.title} cs={cs} testid={`side-project-feature-${i}`} />
+      ))}
     </div>
 
     <div className="mt-12 grid grid-cols-1 gap-4 sm:grid-cols-2">
