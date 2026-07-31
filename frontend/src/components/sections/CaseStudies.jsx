@@ -15,7 +15,7 @@ const Label = ({ children, accent = false }) => (
   </span>
 );
 
-const CaseStudy = ({ cs, testid }) => {
+export const CaseStudy = ({ cs, testid }) => {
   const ref = useRef(null);
   const { scrollYProgress } = useScroll({
     target: ref,
