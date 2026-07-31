@@ -432,7 +432,7 @@ export const sideProjects = [
   {
     title: "Multi LLM Comparison",
     stack: ["Next.js", "Supabase", "OpenRouter", "Vercel"],
-    blurb: "Gets questions answered from multiple LLMs at the same time.",
+    blurb: "A single-user web app for chatting with multiple LLMs at once and comparing their answers side by side — with per-response cost, token, and latency data.",
   },
   {
     title: "Shipd",
