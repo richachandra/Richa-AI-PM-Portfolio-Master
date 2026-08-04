@@ -447,11 +447,6 @@ export const sideProjects = [
     blurb: "Generate reviews with the least clicks possible.",
     wip: true,
   },
-  {
-    title: "Standup Bot",
-    stack: ["Node", "Slack API"],
-    blurb: "Async standups that actually get read — summarized by AI every morning.",
-  },
 ];
 
 export const contact = {

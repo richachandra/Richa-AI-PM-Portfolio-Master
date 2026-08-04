@@ -52,8 +52,8 @@ function App() {
         <Skills />
         <PastWork />
         <CaseStudies />
-        <Manifesto />
         <SideProjects />
+        <Manifesto />
       </main>
       <Contact />
     </div>
