@@ -37,7 +37,7 @@ export const Navbar = () => {
           data-testid="nav-logo"
         >
           <span className="h-2.5 w-2.5 rounded-full bg-cyan-glow glow-cyan transition-transform duration-300 group-hover:scale-125" />
-          <span className="font-head text-sm font-bold uppercase tracking-[0.2em] text-white">
+          <span className="font-head text-lg font-bold uppercase tracking-[0.2em] text-white">
             {profile.name}
           </span>
         </button>

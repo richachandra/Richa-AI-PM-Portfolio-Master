@@ -41,7 +41,7 @@ export const about = {
   stats: [
     { value: "14+", label: "Years in product" },
     { value: "50K+", label: "Accounts served" },
-    { value: "99.5%", label: "Platform uptime" },
+    { value: "400+", label: "Hrs/qtr saved on manual work" },
   ],
 };
 
@@ -153,7 +153,7 @@ export const pastWork = [
 
 export const caseStudies = [
   {
-    tag: "Product Strategy · Q-Commerce",
+    tag: "Product Strategy / Retention",
     title: "Licious — Predictable Meat Logistics",
     oneLiner:
       "Turning fixed weekly routines into a logistics optimization engine through flexible subscriptions and provable delivery trust.",
@@ -477,19 +477,16 @@ export const sideProjects = [
     title: "Multi LLM Comparison",
     stack: ["Next.js", "Supabase", "OpenRouter", "Vercel"],
     blurb: "A single-user web app for chatting with multiple LLMs at once and comparing their answers side by side — with per-response cost, token, and latency data.",
-    wip: true,
   },
   {
     title: "LLM as a Judge",
     stack: ["Supabase", "OpenRouter", "Vercel", "PostHog"],
     blurb: "Gets answers from multiple LLMs and returns the verdict.",
-    wip: true,
   },
   {
     title: "Google Review Generator App",
     stack: [],
     blurb: "Generate reviews with the least clicks possible.",
-    wip: true,
   },
 ];
 
