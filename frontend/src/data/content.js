@@ -48,11 +48,11 @@ export const about = {
 export const careerJourney = [
   {
     period: "Jun 2021 — Present",
-    title: "Product Manager",
+    title: "Product Lead",
     company: "Morgan Stanley",
     location: "Mumbai",
     achievement:
-      "Defined product strategy and led end-to-end delivery of a German Tax Reporting modernization platform — 100% regulatory compliance achieved.",
+      "Defined Product Strategy and Roadmap for Withholding Tax Reporting modernisation platform serving 50K+ accounts, achieving 100% regulatory compliance and reducing audit escalations by 60%.",
   },
   {
     period: "Dec 2016 — Jun 2021",
