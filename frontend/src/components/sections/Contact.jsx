@@ -19,7 +19,7 @@ export const Contact = () => (
       </Reveal>
 
       <Reveal delay={0.08}>
-        <h2 className="mt-8 font-head text-[13vw] font-bold leading-[0.9] tracking-tighter text-white lg:text-[9rem]">
+        <h2 className="mt-8 max-w-4xl font-head text-4xl font-medium leading-[1.05] tracking-tight text-white sm:text-5xl lg:text-6xl">
           {contact.heading}
         </h2>
       </Reveal>

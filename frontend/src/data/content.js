@@ -491,7 +491,7 @@ export const sideProjects = [
 ];
 
 export const contact = {
-  heading: "Let's build something",
+  heading: "Let's turn a hard problem into a shipped product.",
   socials: [
     { label: "Email", value: "richachandra07@gmail.com", href: "mailto:richachandra07@gmail.com" },
     { label: "LinkedIn", value: "/in/richachandra7", href: "https://www.linkedin.com/in/richachandra7" },

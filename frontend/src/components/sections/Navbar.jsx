@@ -54,14 +54,6 @@ export const Navbar = () => {
             </button>
           ))}
         </div>
-
-        <button
-          onClick={() => scrollTo("contact")}
-          data-testid="nav-cta"
-          className="rounded-full bg-white px-5 py-2 font-body text-sm font-medium text-ink transition-transform duration-300 hover:scale-[1.04] active:scale-95"
-        >
-          Get in touch
-        </button>
       </nav>
     </motion.header>
   );
