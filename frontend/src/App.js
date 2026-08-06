@@ -6,6 +6,7 @@ import Navbar from "@/components/sections/Navbar";
 import Hero from "@/components/sections/Hero";
 import EditorialMarquee from "@/components/sections/EditorialMarquee";
 import About from "@/components/sections/About";
+import CareerJourney from "@/components/sections/CareerJourney";
 import Skills from "@/components/sections/Skills";
 import PastWork from "@/components/sections/PastWork";
 import CaseStudies from "@/components/sections/CaseStudies";
@@ -49,6 +50,7 @@ function App() {
         <Hero />
         <EditorialMarquee />
         <About />
+        <CareerJourney />
         <Skills />
         <PastWork />
         <CaseStudies />

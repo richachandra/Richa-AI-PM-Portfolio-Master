@@ -12,6 +12,7 @@ export const profile = {
 
 export const navLinks = [
   { label: "About", target: "about" },
+  { label: "Career", target: "career-journey" },
   { label: "Past Product Work", target: "work" },
   { label: "Case Studies", target: "case-studies" },
   { label: "Side Projects", target: "side-projects" },
@@ -43,6 +44,49 @@ export const about = {
     { value: "99.5%", label: "Platform uptime" },
   ],
 };
+
+export const careerJourney = [
+  {
+    period: "Jun 2021 — Present",
+    title: "Product Manager",
+    company: "Morgan Stanley",
+    location: "Mumbai",
+    achievement:
+      "Defined product strategy and led end-to-end delivery of a German Tax Reporting modernization platform — 100% regulatory compliance achieved.",
+  },
+  {
+    period: "Dec 2016 — Jun 2021",
+    title: "Product Owner",
+    company: "JPMorgan Chase",
+    location: "Mumbai",
+    achievement:
+      "Owned and launched the credit card onboarding roadmap end-to-end — automated workflows eliminating 400+ hours/quarter of manual processing.",
+  },
+  {
+    period: "Sep 2013 — Jun 2014",
+    title: "Application Developer",
+    company: "JPMorgan Chase",
+    location: "Mumbai",
+    achievement:
+      "Automated 5 business-critical reporting workflows, reducing manual processing time by 40%.",
+  },
+  {
+    period: "Dec 2010 — Feb 2013",
+    title: "Product Analyst",
+    company: "IGATE",
+    location: "Mumbai",
+    achievement:
+      "Delivered 3 major product releases on time, improving sprint transparency by 25%.",
+  },
+  {
+    period: "Aug 2008 — Nov 2010",
+    title: "System Analyst",
+    company: "JPMorgan Chase",
+    location: "Mumbai",
+    achievement:
+      "Led process automation via CyberArk onboarding — automating 75% of manual system workflows.",
+  },
+];
 
 export const skills = [
   {
