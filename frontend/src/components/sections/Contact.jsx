@@ -50,7 +50,7 @@ export const Contact = () => (
           </Reveal>
           <Reveal delay={0.1}>
             <p className="mt-6 max-w-sm font-body text-sm text-white/50">
-              Open to senior & lead product roles, advisory and the occasional
+              Open to senior & lead product roles and the occasional
               ambitious side quest.
             </p>
           </Reveal>
