@@ -9,7 +9,7 @@ export const CareerJourney = () => (
     data-testid="career-journey-section"
   >
     <SectionHeading overline="Career Journey">
-      Fifteen years shipping<br className="hidden sm:block" /> products at scale.
+      Fourteen years shipping<br className="hidden sm:block" /> products at scale.
     </SectionHeading>
 
     <div className="relative mt-20">

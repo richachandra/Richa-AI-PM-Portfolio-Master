@@ -40,14 +40,14 @@ export const about = {
   ],
   stats: [
     { value: "14+", label: "Years in product" },
-    { value: "PSPO & PSM", label: "Certified" },
+    { value: "50K+", label: "Accounts served" },
     { value: "99.5%", label: "Platform uptime" },
   ],
 };
 
 export const careerJourney = [
   {
-    period: "Jun 2021 — Present",
+    period: "Jun 2021 — May 2026",
     title: "Product Lead",
     company: "Morgan Stanley",
     location: "Mumbai",
@@ -80,7 +80,7 @@ export const careerJourney = [
   },
   {
     period: "Aug 2008 — Nov 2010",
-    title: "System Analyst",
+    title: "Software Analyst",
     company: "JPMorgan Chase",
     location: "Mumbai",
     achievement:
