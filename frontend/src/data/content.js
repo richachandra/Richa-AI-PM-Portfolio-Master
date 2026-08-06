@@ -153,7 +153,7 @@ export const pastWork = [
 
 export const caseStudies = [
   {
-    tag: "Product Strategy / Retention",
+    tag: "Product Strategy · E - Commerce / Retention",
     title: "Licious — Predictable Meat Logistics",
     oneLiner:
       "Turning fixed weekly routines into a logistics optimization engine through flexible subscriptions and provable delivery trust.",
