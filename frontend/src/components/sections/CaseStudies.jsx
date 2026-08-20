@@ -1,6 +1,6 @@
 import { useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
-import { ArrowUpRight, ArrowUp, ArrowDown, FileText } from "lucide-react";
+import { ArrowUpRight, ArrowUp, ArrowDown, FileText, ExternalLink } from "lucide-react";
 import { caseStudies } from "../../data/content";
 import SectionHeading from "../shared/SectionHeading";
 import Reveal from "../shared/Reveal";
@@ -61,6 +61,20 @@ export const CaseStudy = ({ cs, testid }) => {
             <p className="max-w-2xl font-body text-lg leading-relaxed text-white/70">
               {cs.oneLiner}
             </p>
+            {cs.url && (
+              <a
+                href={cs.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                data-testid="case-study-live-url"
+                className="group mt-3 inline-flex items-center gap-2 font-mono text-sm text-cyan-glow transition-colors duration-300 hover:text-white"
+              >
+                <ExternalLink className="h-3.5 w-3.5" />
+                <span className="break-all underline decoration-cyan-glow/40 underline-offset-4 transition-colors group-hover:decoration-white">
+                  {cs.url.replace(/^https?:\/\//, "")}
+                </span>
+              </a>
+            )}
           </Reveal>
         )}
 

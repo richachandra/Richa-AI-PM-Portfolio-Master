@@ -266,6 +266,7 @@ export const sideProjectFeatures = [
   title: "My Kitchen — A Multi-Agent Home-Chef Marketplace",
   oneLiner:
     "A multi-agent system that reliably matches home chefs with customers by breaking the order lifecycle into purpose-built agents — each designed to fail gracefully.",
+  url: "https://my-kitchen-dccba.web.app/",
   image:
     "https://images.unsplash.com/photo-1556910103-1c02745aae4d?crop=entropy&cs=srgb&fm=jpg&q=85&w=1600",
   pdf: "/case-studies/multi-agent-marketplace-strategy.pdf",
