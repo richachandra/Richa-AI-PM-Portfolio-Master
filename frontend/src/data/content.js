@@ -125,8 +125,7 @@ export const pastWork = [
     ],
     reflection:
       "Close the feedback loop earlier — automatically turn rejected proposals (tagged against a five-reason failure taxonomy) into systematic prompt and runbook-library improvements, instead of treating them as evaluation data only.",
-    image:
-      "https://images.unsplash.com/photo-1551288049-bebda4e38f71?crop=entropy&cs=srgb&fm=jpg&q=85&w=1400",
+    image: "/images/ai-triage-copilot.webp",
   },
   {
     index: "02",

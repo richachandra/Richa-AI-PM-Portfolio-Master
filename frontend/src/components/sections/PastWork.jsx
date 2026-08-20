@@ -22,7 +22,7 @@ const WorkItem = ({ item, flip }) => {
     target: ref,
     offset: ["start end", "end start"],
   });
-  const imgY = useTransform(scrollYProgress, [0, 1], ["-12%", "12%"]);
+  const imgY = useTransform(scrollYProgress, [0, 1], ["-5%", "5%"]);
 
   return (
     <div
@@ -35,13 +35,13 @@ const WorkItem = ({ item, flip }) => {
         <Reveal y={60}>
           <div className="group relative aspect-[4/3] overflow-hidden rounded-2xl border border-white/10 lg:sticky lg:top-28">
             <motion.img
-              style={{ y: imgY, scale: 1.2 }}
+              style={{ y: imgY, scale: 1.06 }}
               src={item.image}
               alt={item.title}
               className="absolute inset-0 h-full w-full object-cover"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-ink/80 via-transparent to-transparent" />
-            <div className="absolute inset-0 bg-[radial-gradient(80%_80%_at_50%_15%,transparent,rgba(5,5,5,0.55))]" />
+            <div className="absolute inset-0 bg-gradient-to-t from-ink/40 via-transparent to-transparent" />
+            <div className="absolute inset-0 bg-[radial-gradient(80%_80%_at_50%_15%,transparent,rgba(5,5,5,0.2))]" />
             <span className="absolute left-5 top-4 glass rounded-full px-3 py-1 font-mono text-[11px] uppercase tracking-widest text-white/80">
               {item.category}
             </span>
