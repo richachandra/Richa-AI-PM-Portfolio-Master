@@ -342,6 +342,7 @@ export const sideProjectFeatures = [
     title: "ProteinGPT — Your Protein Recommendation Engine",
     oneLiner:
       "An AI guide that cuts through a confusing, adulteration-prone supplement market to deliver personalized, trustable protein recommendations.",
+    url: "https://proteingpt.lovable.app",
     image:
       "https://images.unsplash.com/photo-1593095948071-474c5cc2989d?crop=entropy&cs=srgb&fm=jpg&q=85&w=1600",
     pdf: "/case-studies/proteingpt-strategic-blueprint.pdf",
