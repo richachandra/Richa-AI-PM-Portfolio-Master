@@ -110,6 +110,26 @@ export const skills = [
 export const pastWork = [
   {
     index: "01",
+    title: "AI Triage Copilot",
+    category: "AI · Ops Tooling",
+    url: "https://incident-triage-copilot.bolt.host/",
+    problem:
+      "L1 ops engineers spend most of their time on repetitive incident classification — picking categories, finding runbooks, scanning past incidents — slowing response times and pulling skilled people away from novel problems. Getting it wrong is asymmetric: a misclassified P4 costs two minutes, a misclassified P1 can miss a recall window or regulatory deadline.",
+    role:
+      "Designed and built the full system: the LLM-based copilot (two-call classification + runbook matching with embedding retrieval), the engineer review workspace with accept/edit/reject/escalate flows, the golden dataset and evaluation harness, and the staged rollout governance framework.",
+    approach:
+      "A two-stage LLM pipeline classifies each ticket into one of 12 categories with a calibrated confidence score, then matches it to the right runbook step from a 31-step library. Classification is grounded in the top 3 most similar past incidents surfaced via embedding similarity. Priority-tiered thresholds govern auto-resolve — P1 tickets are structurally excluded from ever being auto-resolved, and rollout is staged (shadow, suggest, auto-resolve) with hard rollback triggers.",
+    outcomes: [
+      { value: "35%", label: "Reduction in MTTR (copilot vs. manual control)" },
+      { value: "120+", label: "Engineering hours saved per month" },
+    ],
+    reflection:
+      "Close the feedback loop earlier — automatically turn rejected proposals (tagged against a five-reason failure taxonomy) into systematic prompt and runbook-library improvements, instead of treating them as evaluation data only.",
+    image:
+      "https://images.unsplash.com/photo-1551288049-bebda4e38f71?crop=entropy&cs=srgb&fm=jpg&q=85&w=1400",
+  },
+  {
+    index: "02",
     title: "German Tax Reporting Modernization",
     category: "Regulatory Tech",
     problem:
@@ -130,7 +150,7 @@ export const pastWork = [
       "https://images.unsplash.com/photo-1554224155-6726b3ff858f?crop=entropy&cs=srgb&fm=jpg&q=85&w=1400",
   },
   {
-    index: "02",
+    index: "03",
     title: "Credit Card Onboarding Platform",
     category: "Credit Cards",
     problem:

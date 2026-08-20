@@ -1,5 +1,6 @@
 import { useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
+import { ExternalLink } from "lucide-react";
 import { pastWork } from "../../data/content";
 import SectionHeading from "../shared/SectionHeading";
 import Reveal from "../shared/Reveal";
@@ -59,6 +60,20 @@ const WorkItem = ({ item, flip }) => {
           <h3 className="mt-4 font-head text-3xl font-medium leading-tight tracking-tight text-white lg:text-4xl">
             {item.title}
           </h3>
+          {item.url && (
+            <a
+              href={item.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              data-testid={`work-live-url-${item.index}`}
+              className="group mt-3 inline-flex items-center gap-2 font-mono text-sm text-cyan-glow transition-colors duration-300 hover:text-white"
+            >
+              <ExternalLink className="h-3.5 w-3.5" />
+              <span className="break-all underline decoration-cyan-glow/40 underline-offset-4 transition-colors group-hover:decoration-white">
+                {item.url.replace(/^https?:\/\//, "").replace(/\/$/, "")}
+              </span>
+            </a>
+          )}
         </Reveal>
 
         <div className="mt-8 space-y-6">
