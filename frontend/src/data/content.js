@@ -40,8 +40,8 @@ export const about = {
   ],
   stats: [
     { value: "14+", label: "Years in product" },
-    { value: "50K+", label: "Accounts served" },
-    { value: "400+", label: "Hrs/qtr saved on manual work" },
+    { value: "35%", label: "MTTR reduction" },
+    { value: "120+", label: "Engineering hrs/month saved" },
   ],
 };
 
