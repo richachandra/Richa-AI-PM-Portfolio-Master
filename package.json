@@ -6,7 +6,7 @@
     "postinstall": "cd frontend && npm install --legacy-peer-deps",
     "dev": "cd frontend && npm start",
     "start": "cd frontend && npm start",
-    "build": "cd frontend && npm run build && rm -rf ../build && cp -r build ../build",
+    "build": "cd frontend && npm run build && rm -rf ../dist ../build && cp -r build ../build && cp -r build ../dist",
     "test": "cd frontend && npm test"
   }
 }
