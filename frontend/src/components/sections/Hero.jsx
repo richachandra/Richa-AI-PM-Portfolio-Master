@@ -59,7 +59,7 @@ export const Hero = () => {
         </motion.div>
 
         <h1
-          className="font-head text-[15vw] font-bold leading-[0.92] tracking-tighter text-white sm:text-[13vw] lg:text-[8.5rem]"
+          className="font-head text-[11vw] font-bold leading-[0.92] tracking-tighter text-white sm:text-[10vw] lg:text-[7rem]"
           data-testid="hero-heading"
         >
           <MaskedLines lines={profile.heroLines} start={0.35} stagger={0.13} />

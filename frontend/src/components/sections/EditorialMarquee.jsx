@@ -10,7 +10,7 @@ export const EditorialMarquee = () => (
     <Marquee speed={40} gradient={false} autoFill>
       {marqueeItems.map((item, i) => (
         <div key={i} className="flex items-center">
-          <span className="px-8 font-head text-5xl font-medium tracking-tight text-white/90 sm:text-6xl lg:text-7xl">
+          <span className="px-8 font-head text-3xl font-medium tracking-tight text-white/90 sm:text-4xl lg:text-5xl">
             {item}
           </span>
           <span className="text-3xl text-cyan-glow">✳</span>
