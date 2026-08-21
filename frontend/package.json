@@ -32,7 +32,6 @@
     "@radix-ui/react-toggle-group": "1.1.7",
     "@radix-ui/react-tooltip": "1.2.4",
     "@tanstack/react-query": "5.56.2",
-    "ajv-keywords": "^5.1.0",
     "axios": "1.18.0",
     "class-variance-authority": "0.7.1",
     "clsx": "2.1.1",
@@ -65,7 +64,7 @@
   },
   "scripts": {
     "start": "craco start",
-    "build": "craco build",
+    "build": "node -e \"const fs=require('fs'),p=require('path');const src=p.join('node_modules','schema-utils','node_modules','ajv');const dst=p.join('node_modules','ajv-keywords','node_modules','ajv');if(fs.existsSync(src)&&!fs.existsSync(dst)){fs.mkdirSync(p.dirname(dst),{recursive:true});fs.cpSync(src,dst,{recursive:true});console.log('Nested ajv@8 inside ajv-keywords for build compatibility.');}\" && craco build",
     "test": "craco test"
   },
   "browserslist": {
@@ -140,6 +139,15 @@
     "**/jest-util/picomatch": "2.3.2",
     "**/tinyglobby/picomatch": "4.0.4",
     "http-proxy-middleware": "2.0.10"
+  },
+  "overrides": {
+    "ajv-keywords@5": {
+      "ajv": "8.20.0"
+    },
+    "schema-utils@4": {
+      "ajv": "8.20.0",
+      "ajv-keywords": "5.1.0"
+    }
   },
   "packageManager": "yarn@1.22.22+sha512.a6b2f7906b721bba3d67d4aff083df04dad64c399707841b7acf00f6b133b7ac24255f2652fa22ae3534329dc6180534e98d17432037ff6fd140556e2bb3137e"
 }
